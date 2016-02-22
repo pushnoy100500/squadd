@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	.row
+		.col-md-8.col-md-offset-2
+			h3 Contact us
+			form(method="POST" action="/contact/send")
+				.form-group					
+					input.form-control(type="text" name="name" placeholder="Your Name")
+				.form-group				
+					input.form-control(type="email" name="email" placeholder="Your email address")
+				.form-group
+					textarea.form-control(name="message", placeholder="Your message...")
+				button.btn.btn-primary(type="submit") Submit

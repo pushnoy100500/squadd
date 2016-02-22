@@ -1,7 +1,36 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+	head
+		title= title
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css')
+		link(rel="stylesheet", href="/stylesheets/bootstrap.min.css")
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js")
+		script(src="/javascripts/bootstrap.min.js")
+	body
+		div#fb-root
+		script.
+			(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.5&appId=658814967590922";
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		nav.navbar.navbar-default.nav-colors
+			div.container-fluid
+				.navbar-header
+					button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-target" aria-expanded="false")
+						span.sr-only Toggle Navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a(href="/" class="navbar-brand nav-colors") SQUADD
+				.collapse.navbar-collapse#collapse-target
+					ul.nav.navbar-nav.navbar-right
+						li
+							a(href="/contact" class="nav-colors") Contact Us
+						li
+							a(href="/register" class="nav-colors") Register
+		block content

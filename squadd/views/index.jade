@@ -1,5 +1,13 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+	main
+		.row
+			.col-md-8.col-md-offset-2.col-xs-12
+				img(src="/images/logo_v1.png", alt="logo" class="logo")
+		.row
+			.col-md-12
+				h1.slogan Making Designated Driving Awesome!
+			.col-md-12.fb-btn
+					div(class="fb-share-button" data-href="http://squaddapp.herokuapp.com/" data-layout="button")

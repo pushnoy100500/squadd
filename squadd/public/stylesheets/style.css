@@ -1,8 +1,36 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #44b5e4;
+	color: #fff;
+}
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.navbar-default {
+	background-color: #3998BF;
+	border: none;
+}
+.navbar-default .navbar-brand {
+	color: #fff;
+}
+.navbar-toggle {
+	background-color: #fff;
+}
+.navbar-default .navbar-nav>li>a {
+	color: #fff; 
 }
 
-a {
-  color: #00B7FF;
+.logo {
+	width: 40%;
+	height: auto;
+	display: block;
+	margin: auto;
+}
+.slogan {
+	text-align: center;
+	font-weight: lighter;
+}
+.fb-btn {
+	text-align: center;
 }
