@@ -18,7 +18,7 @@ body {
 	background-color: #fff;
 }
 .navbar-default .navbar-nav>li>a {
-	color: #fff; 
+	color: #fff;
 }
 
 .logo {
@@ -33,4 +33,28 @@ body {
 }
 .fb-btn {
 	text-align: center;
+}
+.sign-up {
+	margin-top: 50px;
+}
+.sign-up h3 {
+	font-weight: lighter;
+	text-align: center;
+}
+.sign-up input {
+	display: inline-block;
+	background-color: rgba(256, 256, 256, 0.3);
+	border: none;
+	border-radius: 0px;
+	color: #fff;
+	text-align: center;
+}
+.sign-up input::-webkit-input-placeholder {
+color: rgba(255,255,255, 0.6);
+text-align: center;
+}
+.sign-up button {
+	display: block;
+	margin: auto;
+	width: 100%;
 }

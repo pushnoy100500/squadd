@@ -7,7 +7,23 @@ block content
 			.col-md-8.col-md-offset-2.col-xs-12
 				img(src="/images/logo_v1.png", alt="logo" class="logo")
 		.row
+			.col-md-12.fb-btn
+				div(class="fb-share-button" data-href="http://squaddapp.herokuapp.com/" data-layout="button")
 			.col-md-12
 				h1.slogan Making Designated Driving Awesome!
-			.col-md-12.fb-btn
-					div(class="fb-share-button" data-href="http://squaddapp.herokuapp.com/" data-layout="button")
+		.row
+			if errors
+				.col-md-10.col-md-offset-1
+					each error, i in errors
+						li.alert.alert-danger #{error.msg}
+			.col-md-8.col-md-offset-2.col-xs-12.sign-up				
+				form(method="POST" action="/users/register")
+					.form-group
+						input.form-control(type="text" name="firstName" placeholder="First Name" required)
+					.form-group
+						input.form-control(type="text" name="lastName" placeholder="Last Name" required)
+					.form-group
+						input.form-control(type="email" name="email" placeholder="Email address" required)
+					.form-group
+						input.form-control(type="password" name="password" placeholder="Password" required)
+					button.btn.btn-primary(type="submit") Sign up

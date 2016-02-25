@@ -6,7 +6,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 
 var nodemailer = require('nodemailer');
-
 var session = require('express-session');
 var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;

@@ -15,7 +15,7 @@ html
 			var js, fjs = d.getElementsByTagName(s)[0];
 			if (d.getElementById(id)) return;
 			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.5&appId=658814967590922";
+			js.src = "//connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.5&appId=658814967590922";
 			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 		nav.navbar.navbar-default.nav-colors
@@ -32,5 +32,5 @@ html
 						li
 							a(href="/contact" class="nav-colors") Contact Us
 						li
-							a(href="/register" class="nav-colors") Register
+							a(href="/users" class="nav-colors") Login
 		block content
