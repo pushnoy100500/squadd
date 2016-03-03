@@ -2,7 +2,9 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	background-color: #44b5e4;
 	color: #fff;
+
 }
+
 .row {
 	margin-left: 0px;
 	margin-right: 0px;
@@ -57,4 +59,31 @@ text-align: center;
 	display: block;
 	margin: auto;
 	width: 100%;
+}
+.footer {
+	display: block;
+	position: absolute;
+	bottom: -150px;
+	width: 100%;
+	background-color: #337ab7;
+	height: 50px;
+	font-weight: lighter;
+	color: rgba(255,255,255,0.8);
+	font-size: 80%;
+	text-align: center;
+}
+.footer p {
+	padding-top: 15px;
+}
+
+/* thank you page */
+.thank-you {
+	text-align: center;
+
+}
+.thank-you .message {
+	margin-top: 100px;
+	padding: 50px;
+	box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.2);; 
+	background-color: rgba(57, 152, 191, 0.5);
 }

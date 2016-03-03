@@ -17,13 +17,11 @@ block content
 					each error, i in errors
 						li.alert.alert-danger #{error.msg}
 			.col-md-8.col-md-offset-2.col-xs-12.sign-up				
-				form(method="POST" action="/users/register")
+				form(method="POST" action="/users/register" class="sign-up-form")
 					.form-group
 						input.form-control(type="text" name="firstName" placeholder="First Name" required)
 					.form-group
 						input.form-control(type="text" name="lastName" placeholder="Last Name" required)
 					.form-group
 						input.form-control(type="email" name="email" placeholder="Email address" required)
-					.form-group
-						input.form-control(type="password" name="password" placeholder="Password" required)
 					button.btn.btn-primary(type="submit") Sign up
