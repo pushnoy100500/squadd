@@ -84,6 +84,13 @@ text-align: center;
 .thank-you .message {
 	margin-top: 100px;
 	padding: 50px;
-	box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.2);; 
+	box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.2);;
 	background-color: rgba(57, 152, 191, 0.5);
+}
+
+/* admin area styles */
+.welcome-admin {
+	margin-top: 50px;
+	font-weight: lighter;
+	text-align: center;
 }

@@ -1,0 +1,25 @@
+html
+  head
+    title Squadd Admin
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css')
+    link(rel="stylesheet", href="/stylesheets/bootstrap.min.css")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js")
+    script(src="/javascripts/bootstrap.min.js")
+  body
+  .row
+    .col-md-12
+      p 
+        a(href="/" class="btn btn-danger btn-block") Woops I'm just a user!
+    h1.welcome-admin  Welcome to admin paneL!
+    p.welcome-admin Please Log in
+    .row
+      .col-md-8.col-md-offset-2
+        form(method='POST' action='/admin/login')
+          .form-group
+            input(type='text' name='username' class='form-control' placeholder='admin name')
+          .form-group
+            input(type='password' name='password' class='form-control' placeholder='access password')
+          button(type='submit' class='btn btn-warning btn-block') Login
+    

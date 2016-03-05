@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/squadd');
-var db = mongoose.connection;
+// mongoose database connection
+var db = require('./db');
 
 //User schema
 var UserSchema = mongoose.Schema({
