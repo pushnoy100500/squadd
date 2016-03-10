@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/userModel');
-
+var nodemailer = require('nodemailer');
 
 /* Thank you page. */
 router.get('/', function(req, res, next) {
@@ -31,22 +31,32 @@ router.post('/register', function(req, res, next) {
       //password: password
     });
   } else {
-
       var newUser = new User({
         firstName: firstName,
         lastName: lastName,
         email: email
-      //  password: encrypt(password)
       });
       //create user
       User.createUser(newUser, function(error, user) {
         if(error) {
-        //  throw error
         console.error(error);
         } else {
-        console.log(user);
-    //    req.flash("success", "You are now registered and may log in");
-    //    res.location('/users');
+          console.log(user);
+          //send email here
+          var transporter = nodemailer.createTransport('smtps://squaddapp%40gmail.com:awesometeam@smtp.gmail.com');
+          var mailOptions = {
+            from: "SQUADD TEAM",
+            to: user.email,
+            subject: "Welcome to SQUADD",
+            html: '<table style="width: 100%;"> <thead> <tr> <td> </td> <td> <h3 style="text-align: center;"> Welcome to SQUADD </h3> </td> <td> </td> </tr> </thead> <tbody> <tr> <td></td> <td> You are about the get into the most awesome DD experience. Please keep an eye on updates from us and our website! </td> <td></td> </tr> </tbody> </table> '
+          };
+          transporter.sendMail(mailOptions, function(err, info) {
+        		if(err) {
+        			console.log(err);
+        		} else {
+        			console.log("message sent " + info.response);
+        		}
+        	})
           res.redirect('../users');
         }
       })
