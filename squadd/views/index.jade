@@ -2,15 +2,14 @@ extends layout
 
 block content
 
-	main
-		.row
-			.col-md-8.col-md-offset-2.col-xs-12
-				img(src="/images/logo_v1.png", alt="logo" class="logo")
-		.row
-			.col-md-12.fb-btn
-				div(class="fb-share-button" data-href="http://squaddapp.com/" data-layout="button")
-			.col-md-12
-				h1.slogan Making Designated Driving Awesome!
+	main.landing
+		video(autoplay loop muted id="bgvid")
+			source(src="/images/sxswq.mp4" type="video/webm")
+		div.overlay
+		.col-md-12
+			h1.slogan Making Designated Driving Awesome!
+		.col-md-12
+			h3.slogan2 Exclusive Access! Coming Soon!
 		.row
 			if errors
 				.col-md-10.col-md-offset-1
